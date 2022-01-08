@@ -1,0 +1,57 @@
+<html>
+<head>
+<title>mikrotik hotspot > logout</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<meta http-equiv="pragma" content="no-cache">
+<meta http-equiv="expires" content="-1">
+<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;" />
+<link rel="stylesheet" href="css/informasi.css">
+<style>
+body  {
+    background-image: url("img/2.jpg");
+    background-color: #cccccc;
+	background-size: cover;
+    background-repeat:no-repeat;
+}
+</style> 
+</head>
+
+<body>
+<script language="JavaScript">
+<!--
+    function openLogin() {
+	if (window.name != 'hotspot_logout') return true;
+	open('$(link-login)', '_blank', '');
+	window.close();
+	return false;
+    }
+//-->
+</script>
+
+<div class="informasi">
+<div class="informasi-screen">
+	<div class="informasi-form">
+
+<tr>
+<td align="center" valign="middle">
+<b>you have just logged out</b> <br><br>
+<table class="tabula">  
+<tr><td align="right">user name</td><td>$(username)</td></tr>
+<tr><td align="right">IP address</td><td>$(ip)</td></tr>
+<tr><td align="right">MAC address</td><td>$(mac)</td></tr>
+<tr><td align="right">session time</td><td>$(uptime)</td></tr>
+$(if session-time-left)
+<tr><td align="right">time left</td><td>$(session-time-left)</td></tr>
+$(endif)
+<tr><td align="right">bytes up/down:</td><td>$(bytes-in-nice) / $(bytes-out-nice)</td></tr>
+</table>
+<br>
+<form action="$(link-login)" name="login" onSubmit="return openLogin()">
+<input class="btn" type="submit" value="LOG IN" style="border-radius: 20px;">
+</form>
+</td>
+	</div>
+</div>
+</div>
+</body>
+</html>

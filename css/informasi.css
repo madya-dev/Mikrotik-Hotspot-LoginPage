@@ -1,0 +1,76 @@
+* {
+box-sizing: border-box;
+}
+body {
+font-family: Arial;
+padding: 20px 0 0 0;
+background:#3b5998;
+}
+.informasi {
+margin: 20px auto;
+width: 100%;
+max-width: 350px;
+}
+.informasi-screen {
+padding: 5px;
+border-radius: 0px;
+
+}
+.informasi-form {
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius:3px;
+  width:100%;
+  min-height:400px;
+  max-width:400px;
+  margin:10px auto;
+  padding:10px;
+    max-width:300px;
+}
+.informasi {
+  color:#fff;
+  font-family:arial narrow;
+  letter-spacing: .1em;
+  font-size: 18px;
+  text-transform:uppercase;
+  margin:0 auto;
+  padding:10px;
+  width: 100%;
+}
+a, a:link, a:visited, a:active { background:rgba(255, 255, 255, 0.2); padding:4px; color: #fff; text-decoration: none;}
+a:hover { background:rgba(255, 255, 255, 0.1); color: #fff;}
+
+.tabula,tr td{
+  border:none;
+  color:#fff;
+  background:rgba(255, 255, 255, 0.1);
+  margin-top:10px;
+}
+.btn a{
+	background:transparent;
+}
+.btn {
+  border: transparent;
+  background: rgba(77, 144, 254, 0.9);
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 14px;
+  line-height: 25px;
+  padding: 10px 0;
+  text-align: center;
+  text-decoration: none;
+  text-shadow: none;
+  border-radius: 0px;
+  box-shadow: none;
+  transition: 0.25s;
+  display: block;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.btn:hover {
+  background-color: rgba(40, 111, 224, 0.9);
+  cursor:pointer;
+}
+.btn:focus {
+  border:none;
+}

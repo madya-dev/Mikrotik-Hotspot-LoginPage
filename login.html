@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>Sudarma Hotspot</title>
+  <meta http-equiv="pragma" content="no-cache" />
+<meta http-equiv="expires" content="-1" />	
+<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;" />
+<link rel="stylesheet" href="css/font-awesome.min.css">
+<link rel="stylesheet" href="css/style.css">
+<style>
+body  {
+    background-image: url("img/2.jpg");
+    background-color: #cccccc;
+	background-size: cover;
+    background-repeat:no-repeat;
+}
+</style>  
+</head>
+
+<body>
+	$(if chap-id)
+	<form name="sendin" action="$(link-login-only)" method="post">
+		<input type="hidden" name="username" />
+		<input type="hidden" name="password" />
+		<input type="hidden" name="dst" value="$(link-orig)" />
+		<input type="hidden" name="popup" value="true" />
+	</form>
+	<script type="text/javascript" src="/md5.js"></script>
+	<script type="text/javascript">
+	<!--
+	    function doLogin() {
+		document.sendin.username.value = document.login.username.value;
+		document.sendin.password.value = hexMD5('$(chap-id)' + document.login.password.value + '$(chap-challenge)');
+		document.sendin.submit();
+		return false;
+	    }
+	//-->
+	</script>
+$(endif)
+
+	<div class="login">
+		<div class="login-screen">
+		
+			<div class="app-title">
+				<!-- <h2>SUDARMA HOSPOT</h2> -->
+			<img src="img/singa.jpg"/>
+
+			</div>
+			<div class="login-form">
+			<form name="login" action="$(link-login-only)" method="post"
+			$(if chap-id) onSubmit="return doLogin()" $(endif)>
+			<input type="hidden" name="dst" value="$(link-orig)" />
+			<input type="hidden" name="popup" value="true" />
+				<div class="control-group">
+					<div class="icon">
+		<i class="fa fa-user"></i>
+				<input style="border-radius: 10px" name="username" type="text" class="login-field" value="$(username)" placeholder="Username" id="login-name">
+				<label class="login-field-icon fui-user" for="login-name"></label>
+					</div>
+				</div>
+
+				<div class="control-group">
+					<div class="icon">
+		<i class="fa fa-key"></i>
+				<input name="password" type="password" class="login-field" placeholder="Password" id="login-pass" style="border-radius: 10px">
+				<label class="login-field-icon fui-lock" for="login-pass"></label>
+					</div>
+				</div>
+				<div class="control-group">
+					<input class="btn btn-primary btn-large btn-block" name="submit" type="submit" value="LOG IN" style="border-radius: 20px" />
+					</div>
+			</form>
+			
+				<p>$(if error)<span class="error">$(error)</span>$(endif)</p>
+				
+			</div>
+		</div>
+	</div>
+<script type="text/javascript">
+<!--
+  document.login.username.focus();
+//-->
+</script>  
+  
+</body>
+</html>
